@@ -7,25 +7,25 @@ const password2 = document.getElementById('password2');
 form.addEventListener('submit', e => {
     e.preventDefault();
 
+
     validateInputs();
 });
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
-
     errorDisplay.innerText = message;
-    inputControl.classList.add('error');
+    inputControl.classList.add('.error');
     inputControl.classList.remove('success')
 }
 
 const setSuccess = element => {
     const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+    const errorDisplay = inputControl.querySelector('label');
 
     errorDisplay.innerText = '';
     inputControl.classList.add('success');
-    inputControl.classList.remove('error');
+    inputControl.classList.remove('.error');
 };
 
 const isValidEmail = email => {
